@@ -5,6 +5,6 @@
 
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="/post" class="nav-link active" aria-current="page">Все посты</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Новый пост</a></li>
+        <li class="nav-item"><a href="{{ route('post.create') }}" class="nav-link">Новый пост</a></li>
     </ul>
 </header>

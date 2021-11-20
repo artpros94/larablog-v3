@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -13,7 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts');
+
+        return view('posts', [
+            'categories' => Category::all()->toArray(),
+        ]);
     }
 
     /**
@@ -23,7 +27,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post-create', [
+            'categories' => Category::all()->toArray(),
+        ]);
     }
 
     /**
